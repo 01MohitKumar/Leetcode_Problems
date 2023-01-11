@@ -16,10 +16,10 @@ var minEatingSpeed = function (piles, h) {
   while (l <= r) {
     mid = Math.floor((l + r) / 2);
     time = calcTime(piles, mid);
-    if (mid <= h) {
+    if (time <= h) {
       best = mid;
-      r = mid + 1;
-    } else l = mid - 1;
+      r = mid - 1;
+    } else l = mid + 1;
   }
   return best;
 };
